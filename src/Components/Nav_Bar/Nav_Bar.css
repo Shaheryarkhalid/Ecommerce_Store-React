@@ -1,0 +1,175 @@
+nav.Top_Navbar{
+    width: 100%;
+    height: 100px;
+    position: sticky;
+    top: 0;
+    align-self: flex-start;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:0 20px;
+    z-index: 2;
+}
+.Top_Navbar .Logo_Section{
+    display: flex;
+    align-items: center;
+    color:var(--Store-Primary-Color);
+    cursor: pointer;
+}
+.Top_Navbar .Logo{
+    height: 100px;
+}
+.Top_Navbar .Logo_Section span{
+    text-wrap: nowrap;
+    font-size: clamp(0.5rem,3vw,1rem);
+    font-family: 'Caveat', cursive ;
+
+}
+.Top_Navbar .BG_menu{
+    display: flex;
+}
+.Top_Navbar .BG_menu li{
+    font-size:clamp(0.5rem,3vw,1rem);
+    padding:0 10px;
+    list-style: none;   
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.2s linear;
+    text-wrap: nowrap;
+    font-family: 'Caveat', cursive ;
+
+}
+.Top_Navbar .BG_menu li:hover{
+    color: var(--Store-Primary-Color);
+    transition: all 0.2s linear;
+}
+.Top_Navbar .Actions{
+    position: relative;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.Top_Navbar .Actions .Search_Icon{
+    height:30px;
+    margin:0 20px;
+    cursor: pointer;
+}
+.Top_Navbar .Actions .Cart_Icon {
+    height:30px;
+    cursor: pointer;
+}
+.Top_Navbar  i {
+    font-size:clamp(1rem,5vw,2rem);
+    padding:0 20px;
+    display: none;
+}
+.Top_Navbar .Mobile_Menu{
+    width: 100%;
+    height: 280px;
+    padding: 0;
+    position: absolute;
+    top: 100%;
+    right:0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Store-Primary-Color);
+    color:#fff;
+    box-shadow: 0 0 5px #aaa;
+    z-index: 1;
+    user-select: none;
+    
+}
+.Top_Navbar .Mobile_Menu div{
+    width: 100%;
+}
+.Top_Navbar .Mobile_Menu li{
+    list-style: none;
+    border-bottom: 2px solid;
+    padding: 10px 40px;
+    font-size: 1.5rem;
+    font-family: 'Caveat', cursive ;
+    text-wrap: nowrap;
+}
+.Top_Navbar .Search_From{
+    background-color: var(--Store-Primary-Color);
+    width: 100%;
+    position: absolute;
+    top:100%;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    z-index: 1;
+}
+.Top_Navbar .Search_From input{
+    height: 40px;
+    width: 20vw;
+    padding: 20px;
+    font-size: 1.5rem;
+    border-radius: 10px 0 0 10px;
+    border: none;
+    color: var(--Store-Primary-Color);
+    font-family: 'Caveat', cursive ;
+}
+.Top_Navbar .Search_From input:focus{
+    outline: 1px solid var(--Store-Primary-Color);
+    outline-offset: -4px;
+}
+.Top_Navbar  .Search_From .Submit{
+    position: relative;
+    right: 0;
+    border-radius:0 10px 10px 0;
+    border: none;
+    height: 40px;
+    background-color: #fff;
+    cursor:pointer;
+    padding: 5px;
+}
+.Top_Navbar .Search_From img{
+    height: 30px;
+}
+@media screen and (max-width:1000px) {
+    .Top_Navbar .BG_menu{
+        display: none;
+    }
+    .Top_Navbar .Actions{
+        width: 50%;
+        justify-content: space-evenly;
+    }
+    .Top_Navbar  i {
+        display: inline;
+    }
+    @media screen and (max-width:800px) {
+        .Top_Navbar .Search_From input{
+            width: 40vw;
+        }
+    }
+    @media screen and (max-width:500px) {
+        .Top_Navbar .Mobile_Menu{
+            width: 100%;
+            right: 0;
+        }
+        @media screen and (max-width:400px) {
+            .Top_Navbar .Logo{
+                height: 50px;
+            }
+            .Top_Navbar .Actions .Search_Icon{
+                height: 20px;
+            }
+            .Top_Navbar .Actions .Cart_Icon {
+                height: 20px;
+            }
+            .Top_Navbar .Actions{
+                padding:  0 5px;
+            }
+            .Top_Navbar .Search_From input{
+                width: 70vw;
+            }
+        }
+    }
+}

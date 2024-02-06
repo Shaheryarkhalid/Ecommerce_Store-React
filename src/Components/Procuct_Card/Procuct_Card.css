@@ -1,0 +1,81 @@
+.Product_Card{
+    height: 80%;
+    width: 23%;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #000 ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+.Product_Card .Product_Image{
+    width: 100%;
+    height: 230px;
+    object-fit:contain;
+    border-radius: 10px;
+}
+.Product_Card .Product_Details{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.Product_Card  .Product_Details .Product_Title{
+    font-family: Roboto,sans-serif;
+    font-family: 'Caveat', cursive ;
+    font-size: 1.2rem;
+    font-weight: 800;
+    height: 3.5ch;
+    overflow: hidden;
+    padding:5px;
+}
+.Product_Card .Product_Details .Product_Price{
+    font-family: Roboto,sans-serif;
+    font-family: 'Caveat', cursive ;
+    font-size: clamp(0.5rem,3vw,1.2rem);
+    padding:5px;
+    text-align: center;
+    color: var(--Store-Primary-Color);
+    
+}   
+.Product_Card .Product_Details button{
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #000;
+    font-family: 'Caveat', cursive ;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 3px #000;
+    transition: all 0.5s ease;
+    font-size:clamp(0.5rem,3vw,1.2rem);
+    text-wrap: nowrap;
+}
+.Product_Card .Product_Details button:hover{
+    color: var(--Store-Primary-Color);
+    box-shadow: 0 0 20px #5555;
+    transition: all 0.5s ease;
+}
+.Product_Card .Product_Details .Disabled_button{
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+@media screen and (max-width:800px) {
+    .Product_Card{
+        width: 30%;
+    }
+    @media screen and (max-width:600px) {
+        .Product_Card{
+            width: 40%;
+        }
+        @media screen and (max-width:450px) {
+            .Product_Card{
+                width: 80%;
+            }
+            
+        }
+    }
+}

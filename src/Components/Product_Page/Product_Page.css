@@ -1,0 +1,145 @@
+.Product_Page{
+    min-height: calc(100vh - 100px);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+.Product_Page .Top_Section{
+    width:100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.Product_Page .Top_Section .Product_Image{
+    height: 300px;
+    width: 50%;
+    object-fit: contain;
+}
+.Product_Page .Top_Section .Details{
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.Product_Page .Top_Section .Details .Product_Rating .Old_Rating{
+    color: var(--Store-Primary-Color);
+}
+.Product_Page .Top_Section .Details .Product_Title{
+    font-size: clamp(1rem,5vw,2rem);
+    font-family: 'Caveat', cursive ;   
+    padding: 10px 0; 
+    width: 20ch;
+}
+.Product_Page .Top_Section .Details .Product_Price{
+    font-family: 'Caveat', cursive ;    
+    font-size: 1.5rem;
+    font-size: clamp(1rem,5vw,1.5rem);
+    color: var(--Store-Primary-Color);
+}
+.Product_Page .Top_Section .Details .Actions{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.Product_Page .Top_Section .Details button{
+    padding: 5px 0;
+    margin-bottom: 20px;
+    font-family: 'Caveat', cursive ;    
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.Product_Page .Top_Section .Details .Product_Add_To_Cart{
+    background-color: #000;
+    color: var(--Store-Primary-Color);
+}
+.Product_Page .Top_Section .Details .Product_Checkout{
+    border: 1px solid var(--Store-Primary-Color);
+    background-color:var(--Store-Primary-Color);
+    color: #fff;
+}
+.Product_Page .Bottom_Section{
+    display: flex;
+    justify-content: space-evenly;
+}
+.Product_Page .Bottom_Section .Secutity_Logos{
+    width: 50%;
+}
+.Product_Page .Bottom_Section .Secutity_Logos img{
+    width: 50%;
+}
+.Product_Page .Bottom_Section .Product_Description{
+    width: 50%;
+    padding: 20px;
+    font-family: 'Caveat', cursive ;    
+    font-size: 1.5rem;
+}
+.Product_Page .Top_Section .Details .Disabled_button{
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+@media screen and (max-width:480px) {
+    .Product_Page .Top_Section{
+        flex-direction: column;
+        padding: 0;
+    }
+    .Product_Page .Top_Section .Product_Image{
+        width:100%;
+        object-fit: contain;
+    }
+    .Product_Page .Top_Section .Details{
+        width:100%;
+        padding: 0;
+    }
+    .Product_Page .Bottom_Section {
+        flex-direction: column;
+    }
+    .Product_Page .Bottom_Section .Secutity_Logos{
+        width: 100%;
+        order: 1;
+    }
+    .Product_Page .Bottom_Section .Product_Description{
+        width: 100%;
+        order: 2;
+    }
+}
+
+
+
+/* ...................Raiting.............................. */
+.container {
+    margin: auto;
+    padding: 20px 20px;
+    border-radius: 30px;
+    letter-spacing: 5px;
+    
+  }
+.stars {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+  .stars i {
+    color: #000;
+    font-size: 25px;
+    align-items: center;
+    justify-content: space-evenly;
+    text-shadow: 1px 1px 0.2px black;
+    cursor: pointer;
+  }
+  .active {
+    color:var(--Store-Primary-Color) !important;
+    transform: scale(1.2) !important;
+  }
+  @media screen and (max-width: 480px) {
+    .container {
+        padding: 20px 40px 20px 0;
+      width: 80%;
+      letter-spacing: 2px;
+    }
+  }

@@ -1,0 +1,71 @@
+.Footer{
+    width: 100%;
+    min-height: 50vh;
+    background-color: black;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.Footer .Left_Section ul{
+    user-select: none;
+}
+.Footer .Left_Section ul li{
+    padding: 10px 0;
+    list-style: none;
+    /* border-bottom:1px solid #fff ; */
+    font-family: 'Caveat', cursive ;
+    cursor: pointer;
+}
+.Footer .Left_Section ul li:hover{
+    color: var(--Store-Primary-Color);
+    /* border-bottom:1px solid var(--Store-Primary-Color) ; */
+}
+.Footer .Right_Section form{
+    display: flex;
+    flex-direction: column;
+}
+.Footer .Right_Section h1{
+    padding-left: 10px;
+    color: var(--Store-Primary-Color);
+    font-family: 'Caveat', cursive ;
+}
+.Footer .Right_Section form input{
+    margin: 10px;
+    padding:5px ;
+    background-color: transparent;
+    border: 1px solid var(--Store-Primary-Color);
+    border-radius: 5px;
+}
+.Footer .Right_Section form input[type="text"]{
+    width: 250px;
+    height: 40px;
+    font-size: 1.3rem;
+    background-color:var(--Store-Primary-Color);
+    border: 1px solid #fff;
+    font-family: 'Caveat', cursive ;
+    color: #fff;
+}
+.Footer .Right_Section form input[type="text"]:focus{
+    outline: none;
+}
+.Footer .Right_Section form input[type="submit"]{
+    color:var(--Store-Primary-Color);
+    font-size: 1.3rem;
+    font-family: 'Caveat', cursive ;
+    cursor: pointer;   
+    width: 150px;
+}
+.Footer .Right_Section form input[type="submit"]:hover{
+    color:#fff;
+    border: 1px solid #fff;
+}
+@media screen and (max-width:550px) {
+    .Footer{
+        flex-direction: column;
+    }
+    .Footer .Left_Section{
+
+        align-self:center;
+    }
+}    

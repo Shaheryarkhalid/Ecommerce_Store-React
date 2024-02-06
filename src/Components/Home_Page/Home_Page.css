@@ -1,0 +1,164 @@
+section.Home_Page_Section_1{
+    height: calc(100vh - 100px);
+    width: 100%;
+    background-color: black;
+    display: flex;
+    overflow: hidden;
+}
+.Home_Page_Section_1 div{
+    position: relative;
+    height: 100%;
+    width: 33.33%;
+    object-fit: cover;
+    border: 1px solid #fff;
+}
+.Home_Page_Section_1 div img{
+    width: 100%;
+    height: 100%;
+}
+.Home_Page_Section_1 div .Details{
+    position: absolute;
+    top: 20%;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+.Home_Page_Section_1 div .Details span{
+    font-family: 'Caveat', cursive ;
+    color:var(--Store-Primary-Color);
+    font-size: 3rem;
+}
+.Home_Page_Section_1 div .Details button{
+    margin-top: 30px;
+    padding:10px 20px;
+    background-color: #000;
+    font-family: 'Caveat', cursive ;
+    color: #fff;
+    border: none;
+    font-size: 2rem;
+    box-shadow: 0 0 5px #000;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.Home_Page_Section_1 div .Details button:hover{
+    color: var(--Store-Primary-Color);
+}
+.Home_Page_Section_1 div:hover> .Details{
+    top: 0;
+    opacity: 1;
+    transition: all 0.4s ease;
+}
+.Home_Page_Section_2{
+    height: auto;
+    width: 100%;
+    background-image: url(/src/assets/Section_2_Background.jpg);
+    background-size: cover;
+    background-repeat: repeat;
+    display: flex;
+}
+.Home_Page_Section_2 .Inner{
+    height: auto;
+    width: 100%;
+    padding: 10px 0;
+    backdrop-filter: blur(20px);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 20px;
+    overflow: auto;
+}
+
+.Home_Page_Section_3{
+    height: 80vh;
+    width: 100%;
+    background-image: url(/src/assets/Section_3_Background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Home_Page_Section_3 .Left_Section{
+    width: 50%;
+}
+.Home_Page_Section_3 .Right_Section{
+    width: 50%;
+    color:#fff;
+}
+.Home_Page_Section_3 .Right_Section p,.Home_Page_Section_3 .Right_Section h1,.Home_Page_Section_3 .Right_Section button{
+    font-family: 'Caveat', cursive ;
+}
+.Home_Page_Section_3 .Right_Section p{
+    font-size:clamp(1rem,5vw,1.5rem);
+}
+.Home_Page_Section_3 .Right_Section h1{
+    font-size:clamp(2rem,5vw,4rem);
+}
+.Home_Page_Section_3 .Right_Section button{
+    margin-left: 20px;
+    padding:10px 20px;
+    font-size: 1.2rem;
+    background-color: var(--Store-Primary-Color);
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+.Home_Page_Section_3 .Right_Section button:hover{
+    color: #fff;
+}
+@media screen and (max-width:800px) {
+    .Home_Page_Section_2 .Product .Product_Image{
+        height: 180px;
+    }
+    .Home_Page_Section_3 .Left_Section{
+        display: none;
+    }
+    .Home_Page_Section_3 .Right_Section{
+        width: 50%;
+        color:#fff;
+    }
+    @media screen and (max-width:700px) {
+        section.Home_Page_Section_1{
+            height: calc(50vh);
+        }
+        section.Home_Page_Section_1{
+
+        }
+        .Home_Page_Section_1 div .Details span{
+            font-size: 2rem;
+        }
+        .Home_Page_Section_1 div .Details button{
+            font-size: 1rem;
+        }
+        .Home_Page_Section_1 div .Details{
+            top: 0;
+            opacity: 1;
+        }
+        @media screen and (max-width:550px) {
+            
+            @media screen and (max-width:480px) {
+                .Home_Page_Section_1 div .Details span{
+                    font-size: 1rem;
+                }
+                .Home_Page_Section_1 div .Details button{
+                    font-size: 0.7rem;
+                }
+            }
+            }
+    }
+}
+@media screen and (min-height:500px){
+   .Home_Page_Section_2{
+        height: 500px;
+    }
+    .Home_Page_Section_3{
+        height: 500px;
+    }
+}

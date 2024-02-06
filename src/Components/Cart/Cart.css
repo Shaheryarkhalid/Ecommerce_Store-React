@@ -1,0 +1,90 @@
+.Cart_Sticky_Button{
+    position: fixed;
+    bottom: 30px;
+    right: 50px;
+    padding: 10px 13px;
+    border-radius: 50%;
+    border:2px solid #fff;
+    cursor: pointer;
+    background-color: #000;
+}
+.Cart_Sticky_Button:focus{
+    outline: none;
+}
+.Cart_Sticky_Button .Cart_Icon{
+    height: 30px;
+    width: 30px;
+}
+.Cart_Slider{
+    position: fixed;
+    top: 0;
+    right: -500px;
+    width: 400px;
+    height: 100vh;
+    padding: 20px;
+    background-color: var(--Store-Primary-Color);
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    gap: 20px;
+    overflow: auto;
+    transition: right 0.5s ease;
+}
+.Cart_Slider .Cart_Closer{
+    font-size: 2rem;
+    cursor: pointer;
+    text-align: right;
+}
+.Cart_Slider .Product_Card{
+    width: 90%;
+}
+.Cart_Slider .Clear_Cart{
+    padding: 5px 0;
+    margin-bottom: 20px;
+    font-family: 'Caveat', cursive ;    
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid #000;
+    background-color:var(--Store-Primary-Color);
+    color: #000;
+    justify-self: flex-end;
+}
+.Cart_Slider .Clear_Cart:hover{
+    color: #fff;
+    border: 1px solid #fff;
+}
+.Cart_Slider .Checkout{
+    padding: 5px 0;
+    margin-bottom: 20px;
+    font-family: 'Caveat', cursive ;    
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid #000;
+    background-color:var(--Store-Primary-Color);
+    color: #000;
+    justify-self: flex-end;
+    position: absolute;
+    background-color: #fff;
+    color: var(--Store-Primary-Color);
+    border: none;
+    position: absolute;
+    width: 80%;
+}
+.Cart_Slider .Checkout:hover{
+    color: #000;
+}
+@media screen and (max-width:400px) {
+    .Cart_Slider{
+        width: 100%;
+    }
+    .Cart_Slider .Cart_Closer{
+        padding:0 0 0 20px;
+    }
+    .Cart_Slider .Checkout{
+        width: 70%;
+    }
+}
