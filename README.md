@@ -6,6 +6,7 @@ Implementation of Sync & Async Operations.
 Uses State Management Provided by React. 
 Implements React Router DOM.
 Implements useContext and useReducer for Global implementation of state and it's logic. 
+
 Reffer to Video Below or to the link for More info
 
 
